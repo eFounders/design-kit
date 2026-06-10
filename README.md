@@ -2,6 +2,8 @@
 
 > Un squelette duplicable par projet pour builder on-brand avec Claude Code. Volontairement minimal.
 
+🔗 **Démo live (template)** : [design-kit-storybook.vercel.app](https://design-kit-storybook.vercel.app) — le storybook de référence du kit, en `[PROJECT NAME]`. Chaque projet dupliqué déploie ensuite le sien.
+
 ## Comment l'utiliser
 
 1. **Dupliquer** ce dossier au démarrage d'un projet.
