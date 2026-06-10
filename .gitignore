@@ -4,3 +4,6 @@
 # editor / OS cruft
 *.swp
 Thumbs.db
+
+# Vercel
+.vercel
