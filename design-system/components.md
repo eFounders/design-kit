@@ -4,6 +4,7 @@
 > Chaque fiche est **auto-descriptive** : à quoi ça sert · quand l'utiliser · quand NE PAS · variantes · états · tokens · règles. C'est ce que l'agent lit pour coder juste (R. Kavcic & TJ Pitre).
 > Règle absolue : toutes les valeurs viennent de `tokens.css` (`var(--…)`). Jamais de hex/px en dur.
 > Composant absent → NE PAS l'inventer : combiner l'existant + logger (§ Composants manquants).
+> **Le CSS de ces composants vit dans `components.css`** (classes `.btn`, `.tag`, `.side-nav`, `.card`…). Ce fichier-ci décrit le *quoi / quand* ; `components.css` fournit le *comment*, prêt à poser dans un proto avec `tokens.css`.
 
 ---
 
@@ -151,14 +152,20 @@ Parité Figma (optionnel) : Figma rogne le `leading` du texte à la hauteur de c
 
 # 4 · Navigation
 
-### Sidebar / Nav
-- Structure d'IA du produit, item actif visible (`--accent`/`--primary`), groupes en `--text-2xs` majuscule `--muted-foreground`. Profondeur max 3.
+### Sidebar / Nav  · `.side-nav`
+- Structure d'IA du produit, item actif visible (`.active` → `--accent`/`--accent-foreground`), groupes en `--text-2xs` majuscule `--muted-foreground`. Compteur optionnel à droite (`.count`). Profondeur max 3.
 
-### Breadcrumb
-- Chemin de retour sur les vues profondes. Dernier élément = page courante (non cliquable).
+### Top bar / App bar  · `.topbar`
+- Barre horizontale : marque + liens de nav (`.active`) + actions à droite (`.spacer` pousse). Pour les apps larges ; alternative à la sidebar, pas en plus (une seule nav primaire).
 
-### Pagination
-- Pages ou « charger plus ». Indiquer la position (« 1-20 sur 240 »).
+### Breadcrumb  · `.breadcrumb`
+- Chemin de retour sur les vues profondes. Séparateur `.sep`, dernier élément = page courante (`.current`, non cliquable).
+
+### Menu / Dropdown  · `.menu`
+- Liste d'actions sur un objet (menu « … »). Item destructif en dernier (`.danger`), séparé par `.sep`. Sur `--popover`.
+
+### Pagination  · `.pagination`
+- Pages (`.active` = page courante) + prev/next, `…` (`.ellipsis`) si beaucoup. Ou « charger plus ». Indiquer la position (« 1-20 sur 240 »).
 
 ---
 

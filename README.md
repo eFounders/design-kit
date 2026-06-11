@@ -36,12 +36,15 @@ design-kit/
 ├── CLAUDE.md          ← contexte + règles design (à remplir)
 ├── design-system/     ← la source de vérité, lue par Claude Code
 │   ├── tokens.css         tokens shadcn (--primary, --background…), 2 étages, light/dark
-│   ├── components.md      composants autorisés + règles
+│   ├── components.css     composants prêts à l'emploi, 100% pilotés par les tokens
+│   ├── components.md      specs des composants (variantes, états, quand utiliser)
 │   ├── patterns.md        patterns UX (les 5 états, forms, erreurs, vide…)
-│   └── storybook.html     playground interactif (perso live : marque, dark, radius, densité, police, icônes ; tokens, composants, tags)
+│   └── storybook.html     playground interactif (consomme tokens.css + components.css)
 └── .claude/skills/
     └── design-review/     review on-brand avant PR
 ```
+
+> **Plug-and-play** : poser `tokens.css` + `components.css` dans un proto et utiliser les classes (`btn`, `tag`, `side-nav`, `card`…) → les composants s'adaptent à la marque/police/radius comme les tokens. Le storybook les consomme via ces mêmes fichiers (pas de duplication).
 
 ## Les 2 règles
 

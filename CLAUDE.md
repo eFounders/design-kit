@@ -9,7 +9,7 @@
 
 ## Règles design — NON NÉGOCIABLES
 
-1. **Toujours utiliser le design system** : `design-system/tokens.css` + `components.md` + `patterns.md`. Aucune couleur, taille, spacing, radius ou composant inventé.
+1. **Toujours utiliser le design system** : `design-system/tokens.css` (valeurs) + `components.css` (composants, classes `btn`/`tag`/`side-nav`…) + `components.md` (specs d'usage) + `patterns.md`. Aucune couleur, taille, spacing, radius ou composant inventé.
 2. **Composant manquant** : ne pas improviser → combiner l'existant + logger dans `components.md` § Composants manquants.
 3. **Les 5 états** : tout écran code vide, chargement, erreur, partiel, idéal (voir `patterns.md`).
 4. **Ton** : [tutoiement/vouvoiement, 2-3 mots de personnalité, vocab à éviter — à remplir].
