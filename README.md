@@ -4,6 +4,22 @@
 
 🔗 **Démo live (template)** : [design-kit-storybook.vercel.app](https://design-kit-storybook.vercel.app) — le storybook de référence du kit, en `[PROJECT NAME]`. Chaque projet dupliqué déploie ensuite le sien.
 
+## Quickstart
+
+> Sur GitHub : bouton **« Use this template »** → un repo neuf, sans historique. (ou `git clone`.)
+
+```bash
+# 1. récupérer le kit
+git clone git@github.com:eFounders/design-kit.git mon-projet && cd mon-projet
+
+# 2. le rendre tien (les 2 seuls fichiers à éditer pour démarrer)
+#    design-system/tokens.css → marque, police, radius, densité, tags
+#    CLAUDE.md                → produit, persona, ton, stack
+
+# 3. voir le résultat
+open design-system/storybook.html   # ou déployer design-system/ sur Vercel
+```
+
 ## Comment l'utiliser
 
 1. **Dupliquer** ce dossier au démarrage d'un projet.
